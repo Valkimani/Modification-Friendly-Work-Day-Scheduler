@@ -24,6 +24,9 @@ $(document).ready(function () {
     var timeDisplay = $("<div>")
       .addClass("hour col-sm-1")
       .text(businessHours[i]);
+  var button = $("<button>").addClass("saveBtn col-sm-1").text("save");
+  var row = $("<div>").addClass("row");
+  var text = $("<textarea>").addClass("col-sm-10");
 
   {
   }

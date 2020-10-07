@@ -16,18 +16,34 @@ $(document).ready(function () {
     "4:00 PM",
     "5:00 PM",
   ];
-
+  //   This displays the military time to show if each hour is past, present or future
+  //   var currentHour = moment().format("H");
+  var currentHour = 12;
   $("#currentDay").text(moment().format("dddd MMMM Do YYYY, h:mm a"));
 
   // Created a for loop and added 3 steps
-  for (var i = 0; i < businessHours.length; i++)
+  for (var i = 0; i < businessHours.length; i++) {
     var timeDisplay = $("<div>")
       .addClass("hour col-sm-1")
       .text(businessHours[i]);
-  var button = $("<button>").addClass("saveBtn col-sm-1").text("save");
-  var row = $("<div>").addClass("row");
-  var text = $("<textarea>").addClass("col-sm-10");
+    //   Created variables to add content using class to the element
+    var button = $("<button>").addClass("saveBtn col-sm-1").text("save");
+    var row = $("<div>").addClass("row");
+    var text = $("<textarea>").addClass("col-sm-10");
 
-  {
+    // Created if & else statements to add past present and future content
+
+    //   Appending into the element
+    row.append(timeDisplay, text, button);
+    $("#time-container").append(row);
   }
+  if (currentHour > militaryHours[i]) {
+    text.addClass("past");
+  } else if (currentHour < militaryHours[i]) {
+    text.addClass("future");
+  } else {
+    text.addClass("present");
+  }
+
+  //   Adding a click listener
 });

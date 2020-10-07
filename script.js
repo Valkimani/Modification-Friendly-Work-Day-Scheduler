@@ -33,17 +33,18 @@ $(document).ready(function () {
 
     // Created if & else statements to add past present and future content
 
+    if (currentHour > militaryHours[i]) {
+      text.addClass("past");
+    } else if (currentHour < militaryHours[i]) {
+      text.addClass("future");
+    } else {
+      text.addClass("present");
+    }
+
     //   Appending into the element
+
     row.append(timeDisplay, text, button);
     $("#time-container").append(row);
   }
-  if (currentHour > militaryHours[i]) {
-    text.addClass("past");
-  } else if (currentHour < militaryHours[i]) {
-    text.addClass("future");
-  } else {
-    text.addClass("present");
-  }
-
   //   Adding a click listener
 });

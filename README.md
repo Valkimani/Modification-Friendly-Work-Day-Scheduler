@@ -4,8 +4,6 @@
 
 The purpose of this coding assignment is to create and demonstrate how a user can add and save important events for each hour of the day in a Work Day Scheduler.This allows more effective use of time. A CSS and HTML files were provided as stater code. The rest of the code was created to enable the Scheduler to save data. Dynamically updated HTML and CSS powered by jQuery enable the app to run in the browser.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
 ## Functionality
 
 1. When the user opens the work Scheduler, the current day is displayed at the top of the calendar.

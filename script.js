@@ -58,15 +58,16 @@ $(document).ready(function () {
     saveBtn.on("click", function () {
       var saveWorkScheduler = $(this).data(textInput);
       $(document).on("click", ".save", function () {
-        $(this);
-        saveBtn;
+        console.log(saveWorkScheduler);
+        console.log($(this).siblings("input").val());
+        console.log($(this).siblings(".hour").attr("id"));
       });
-      console.log(saveBtn);
-      console.log($(this).siblings("input").val());
-      console.log($(this).siblings(".hour").attr("id"));
-
-      // local Storage
     });
   }
-  $("#9AM").val(localStorage.getItem("9AM"));
+  // local Storage
+  // When clicked the time and text are stored in local storage.
+  $("#saveBtn").on("click", function () {
+    saveWorkScheduler.val(localStorage.setItem("9AM"));
+    $("#9AM").val(localStorage.setItem("9AM"));
+  });
 });
